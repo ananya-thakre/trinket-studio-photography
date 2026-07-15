@@ -577,10 +577,10 @@ section{ padding:120px 5vw; position:relative; }
   display:flex; flex-wrap:wrap; gap:14px 0; justify-content:space-between; align-items:center;
 }
 .specialty-strip .item{
-  font-family:var(--serif); font-size:clamp(18px,2.4vw,26px); color:var(--stone); font-weight:400;
+  font-family:var(--serif); font-size:clamp(18px,2.4vw,26px); color:var(--ink-soft); font-weight:400;
   display:flex; align-items:center; gap:22px; transition:color .35s ease;
 }
-.specialty-strip .item:hover{ color:var(--ink); }
+.specialty-strip .item:hover{ color:var(--gold); }
 .specialty-strip .item .dot{ width:5px; height:5px; border-radius:50%; background:var(--gold); }
 .specialty-strip .item:first-child .dot{ display:none; }
 
@@ -1174,8 +1174,8 @@ footer{
   /* Hero stacking adjustments */
   .hero-content{
     grid-template-columns:1fr;
-    padding-top:150px;
-    gap:45px;
+    padding-top:140px;
+    gap:40px;
     text-align:center;
   }
   .hero-left{
@@ -1184,6 +1184,41 @@ footer{
   .hero-cta-row{
     justify-content:center;
     gap:20px;
+  }
+  .hero-sub {
+    color: var(--paper-dim) !important;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* Portfolio teaser overlay visibility on mobile (since hover doesn't exist) */
+  .ph .ph-overlay {
+    opacity: 1 !important;
+    background: linear-gradient(180deg, transparent 30%, rgba(15,13,10,0.85) 100%) !important;
+  }
+  .ph .ph-tag, .ph .ph-title {
+    transform: translateY(0) !important;
+  }
+
+  /* Testimonials marquee text contrast on dark background */
+  .marquee-track span {
+    color: var(--paper-dim) !important;
+  }
+
+  /* Specialty strip vertical column stack for small phones */
+  @media (max-width: 600px) {
+    .specialty-strip {
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      padding: 40px 5vw;
+    }
+    .specialty-strip .item {
+      font-size: 20px;
+    }
+    .specialty-strip .item .dot {
+      display: none !important;
+    }
   }
 }
 @media (max-width:400px){
