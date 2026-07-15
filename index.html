@@ -115,22 +115,22 @@ header.site-header.scrolled{
 }
 header.site-header.hide{ transform:translateY(-115%); }
 
-/* Theme-dark styles for header overlay on homepage canvas */
+/* Theme-dark styles for header overlay on homepage canvas (high-contrast premium) */
 header.site-header.theme-dark{
-  color:var(--paper-dim);
+  color:var(--paper);
 }
 header.site-header.theme-dark .logo{
-  color:var(--paper-dim);
+  color:var(--paper);
 }
 header.site-header.theme-dark .logo .blade-l{
-  fill:var(--paper-dim);
+  fill:var(--paper);
 }
 header.site-header.theme-dark .logo circle[fill="none"]{
   fill:none !important;
-  stroke:var(--paper-dim);
+  stroke:var(--paper);
 }
 header.site-header.theme-dark nav.main-nav a{
-  color:var(--paper-dim);
+  color:rgba(245, 240, 230, 0.8);
 }
 header.site-header.theme-dark nav.main-nav a.active{
   color:var(--gold-bright);
@@ -139,16 +139,16 @@ header.site-header.theme-dark nav.main-nav a::after{
   background:var(--gold-bright);
 }
 header.site-header.theme-dark .nav-cta{
-  border-color:var(--paper-dim);
-  color:var(--paper-dim);
+  border-color:rgba(245, 240, 230, 0.4);
+  color:var(--paper);
 }
 header.site-header.theme-dark .nav-cta:hover{
-  background:var(--paper-dim);
+  background:var(--gold-bright);
   color:var(--ink);
-  border-color:var(--paper-dim);
+  border-color:var(--gold-bright);
 }
 header.site-header.theme-dark .hamburger span{
-  background:var(--paper-dim);
+  background:var(--paper);
 }
 
 /* Force light frosted background on split-screen pages (Contact) */
@@ -538,11 +538,21 @@ nav.main-nav a.active{ color:var(--gold); }
 }
 .hero h1 em{ font-style:italic; color:var(--gold-bright); font-weight:300; }
 .hero-sub{
-  max-width:460px; margin:26px 0 40px; font-size:16px; line-height:1.7; color:var(--stone-light);
+  max-width:460px; margin:26px 0 40px; font-size:16px; line-height:1.7; color:var(--paper-dim);
   opacity:0; transform:translateY(20px); animation:riseIn 1s var(--ease) .65s forwards;
 }
 .hero-cta-row{ display:flex; align-items:center; gap:26px; flex-wrap:wrap;
   opacity:0; transform:translateY(20px); animation:riseIn 1s var(--ease) .8s forwards; }
+.hero-cta-row .btn-primary {
+  background: var(--gold-bright);
+  color: var(--ink);
+}
+.hero-cta-row .btn-primary::before {
+  background: #ffffff;
+}
+.hero-cta-row .btn-primary:hover {
+  color: var(--ink);
+}
 @keyframes riseIn{ to{ opacity:1; transform:translateY(0);} }
 
 .hero-scroll{
