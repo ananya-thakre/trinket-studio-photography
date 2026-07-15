@@ -1049,6 +1049,18 @@ footer{
   }
   
   /* Unified Dark Theme for Contact Form on Mobile */
+  .contact-info h1 {
+    color: #ffffff !important;
+  }
+  .contact-info > p {
+    color: var(--paper-dim) !important;
+  }
+  .contact-info .contact-detail .cd-value {
+    color: #ffffff !important;
+  }
+  .contact-info .contact-detail .cd-label {
+    color: var(--gold-bright) !important;
+  }
   .contact-form-panel .form-heading {
     color: var(--paper);
   }
@@ -1058,8 +1070,8 @@ footer{
   .contact-form-panel .form-group input,
   .contact-form-panel .form-group select,
   .contact-form-panel .form-group textarea {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(245, 240, 230, 0.15);
+    background: rgba(22, 19, 15, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
     color: var(--paper);
   }
   .contact-form-panel .form-group input:focus,
@@ -1071,6 +1083,17 @@ footer{
   .contact-form-panel .form-group label {
     color: var(--stone-light);
   }
+  
+  /* Floating label colors on dark background */
+  .contact-form-panel .form-group input:focus ~ label,
+  .contact-form-panel .form-group input:not(:placeholder-shown) ~ label,
+  .contact-form-panel .form-group select:focus ~ label,
+  .contact-form-panel .form-group.filled select ~ label,
+  .contact-form-panel .form-group textarea:focus ~ label,
+  .contact-form-panel .form-group textarea:not(:placeholder-shown) ~ label {
+    color: var(--gold-bright) !important;
+  }
+  
   .contact-form-panel .form-group select option {
     background: #1c1815;
     color: var(--paper);
@@ -1081,6 +1104,20 @@ footer{
   .contact-form-panel .char-counter {
     color: var(--stone-light);
   }
+  
+  /* High contrast CTA button on dark background */
+  .contact-form-panel .submit-btn {
+    background: var(--gold-bright) !important;
+    color: var(--ink) !important;
+  }
+  .contact-form-panel .submit-btn::before {
+    background: #ffffff !important;
+  }
+  .contact-form-panel .submit-btn:hover {
+    color: var(--ink) !important;
+  }
+  
+  /* Success panel */
   .contact-form-panel .success-panel {
     background: var(--ink);
   }
@@ -1089,6 +1126,14 @@ footer{
   }
   .contact-form-panel .success-panel p {
     color: var(--stone-light);
+  }
+  .contact-form-panel .success-panel .btn-ghost {
+    border-color: var(--paper-dim) !important;
+    color: var(--paper) !important;
+  }
+  .contact-form-panel .success-panel .btn-ghost:hover {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
   }
   
   /* Mobile Header Override for Contact Page */
