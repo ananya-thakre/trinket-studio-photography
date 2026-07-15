@@ -1041,9 +1041,84 @@ footer{
   nav.main-nav, .nav-cta{ display:none; }
   .hamburger{ display:flex; }
   .about-split{ grid-template-columns:1fr; padding-top:150px; }
-  .contact-wrap{ grid-template-columns:1fr; padding-top:150px; }
-  .contact-info{ padding:80px 6vw; }
-  .contact-form-panel{ padding:60px 6vw 100px; }
+  .contact-wrap{ grid-template-columns:1fr; padding-top:80px; }
+  .contact-info{ padding:60px 6vw 40px; }
+  .contact-form-panel{
+    padding:40px 6vw 80px;
+    background:var(--ink);
+  }
+  
+  /* Unified Dark Theme for Contact Form on Mobile */
+  .contact-form-panel .form-heading {
+    color: var(--paper);
+  }
+  .contact-form-panel .form-heading::after {
+    background: linear-gradient(90deg, var(--gold-bright), transparent);
+  }
+  .contact-form-panel .form-group input,
+  .contact-form-panel .form-group select,
+  .contact-form-panel .form-group textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(245, 240, 230, 0.15);
+    color: var(--paper);
+  }
+  .contact-form-panel .form-group input:focus,
+  .contact-form-panel .form-group select:focus,
+  .contact-form-panel .form-group textarea:focus {
+    border-color: var(--gold-bright);
+    box-shadow: 0 0 0 4px rgba(216, 184, 124, 0.15);
+  }
+  .contact-form-panel .form-group label {
+    color: var(--stone-light);
+  }
+  .contact-form-panel .form-group select option {
+    background: #1c1815;
+    color: var(--paper);
+  }
+  .contact-form-panel .select-arrow path {
+    stroke: var(--gold-bright);
+  }
+  .contact-form-panel .char-counter {
+    color: var(--stone-light);
+  }
+  .contact-form-panel .success-panel {
+    background: var(--ink);
+  }
+  .contact-form-panel .success-panel h3 {
+    color: var(--paper);
+  }
+  .contact-form-panel .success-panel p {
+    color: var(--stone-light);
+  }
+  
+  /* Mobile Header Override for Contact Page */
+  header.site-header.force-light-bg {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-bottom: none !important;
+    color: var(--paper-dim) !important;
+  }
+  header.site-header.force-light-bg .logo {
+    color: var(--paper-dim) !important;
+  }
+  header.site-header.force-light-bg .logo .blade-l {
+    fill: var(--paper-dim) !important;
+    stroke: none !important;
+  }
+  header.site-header.force-light-bg .logo circle {
+    stroke: var(--paper-dim) !important;
+  }
+  header.site-header.force-light-bg .hamburger span {
+    background: var(--paper-dim) !important;
+  }
+  
+  /* Scrolled dark header on mobile contact page */
+  header.site-header.force-light-bg.scrolled {
+    background: rgba(22, 19, 15, 0.92) !important;
+    backdrop-filter: blur(14px) !important;
+    border-bottom: 1px solid rgba(245, 240, 230, 0.08) !important;
+  }
+
   .featured-grid{ grid-template-columns:repeat(2,1fr); }
   .fg-1{ grid-column:span 2; grid-row:span 1; aspect-ratio:16/10;}
   .fg-2,.fg-3,.fg-4,.fg-5,.fg-6{ grid-column:span 1; }
