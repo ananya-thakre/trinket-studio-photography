@@ -1,0 +1,26 @@
+# Disallow preview crawlers from scraping the website to generate link previews
+# This blocks the scrapers for popular messaging and social media platforms
+
+User-agent: WhatsApp
+Disallow: /
+
+User-agent: facebookexternalhit
+Disallow: /
+
+User-agent: Twitterbot
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+User-agent: TelegramBot
+Disallow: /
+
+User-agent: Discordbot
+Disallow: /
+
+User-agent: Slackbot
+Disallow: /
+
+User-agent: SkypeUriPreview
+Disallow: /
